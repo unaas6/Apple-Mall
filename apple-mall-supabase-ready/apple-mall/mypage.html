@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e1bab3">
+  <title>마이페이지 | Apple Mall</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mypage-wrap {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .mypage-title {
+      margin-bottom: 30px;
+    }
+
+    .mypage-title h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .mypage-grid {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 25px;
+    }
+
+    .mypage-menu,
+    .mypage-content {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 4px 20px #00000008;
+    }
+
+    .mypage-menu a {
+      display: block;
+      padding: 14px;
+      color: #444;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    .mypage-menu a:hover {
+      background: #f8e7e4;
+    }
+
+    .mypage-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 17px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .point-box {
+      background: #f8e7e4;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    @media(max-width:650px) {
+      .mypage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mypage-title h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topline">
+  Apple Mall · 나의 쇼핑 정보
+</div>
+
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html">◉ Apple <span>Mall</span></a>
+    <a href="index.html" class="pill">쇼핑 계속하기</a>
+  </div>
+</header>
+
+<main class="mypage-wrap">
+
+  <a href="index.html" class="back-button">← 쇼핑몰로 돌아가기</a>
+
+  <div class="mypage-title">
+    <h1>마이페이지</h1>
+    <p>회원 정보와 주문 내역을 확인할 수 있습니다.</p>
+  </div>
+
+  <div class="mypage-grid">
+
+    <aside class="mypage-menu">
+      <a href="#myinfo">회원 정보</a>
+      <a href="#mypoint">포인트</a>
+      <a href="#myorders">주문 내역</a>
+      <a href="#" id="logoutBtn">로그아웃</a>
+    </aside>
+
+    <div class="mypage-content">
+
+      <section id="myinfo">
+        <h2>회원 정보</h2>
+
+        <div class="info-row">
+          <span>이름</span>
+          <strong id="memberName">불러오는 중</strong>
+        </div>
+
+        <div class="info-row">
+          <span>이메일</span>
+          <strong id="memberEmail">불러오는 중</strong>
+        </div>
+
+        <div class="info-row">
+          <span>전화번호</span>
+          <strong id="memberPhone">불러오는 중</strong>
+        </div>
+
+        <div class="info-row">
+          <span>회원 등급</span>
+          <strong id="memberGrade">불러오는 중</strong>
+        </div>
+      </section>
+
+      <section id="mypoint" style="margin-top:35px;">
+        <h2>나의 포인트</h2>
+        <div class="point-box">
+          <p>보유 포인트</p>
+          <h2 id="memberPoints">0P</h2>
+        </div>
+      </section>
+
+      <section id="myorders" style="margin-top:35px;">
+        <h2>주문 내역</h2>
+        <div id="orderList">
+          주문 내역을 불러오는 중입니다.
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="mypage.js"></script>
+
+</body>
+</html>
