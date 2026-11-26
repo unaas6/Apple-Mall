@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e1bab3">
+  <title>주문 내역 | Apple Mall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">Apple Mall · 주문 내역</div>
+
+  <header class="header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">🍎 Apple <span>Mall</span></a>
+      <a class="pill" href="mypage.html">마이페이지</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>주문 내역</h2>
+          <p class="section-sub">지금까지 주문한 상품을 확인할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div id="orderList">
+        <div class="empty">주문 내역을 불러오는 중입니다.</div>
+      </div>
+
+      <a class="pill" href="index.html">쇼핑몰로 돌아가기</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="db.js"></script>
+  <script src="orders.js"></script>
+</body>
+</html>
