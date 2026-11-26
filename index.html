@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#e1bab3"><meta name="description" content="Apple Mall - Apple 디지털 제품 전문 쇼핑몰"><title>Apple Mall | 더 스마트한 일상</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="topline">신규 회원가입 시 3,000P 지급 · 회원 등급별 최대 7% 적립</div>
+<header class="header"><div class="wrap nav"><a class="logo" href="index.html">🍎 Apple <span>Mall</span></a><nav class="navlinks"><a href="#products" onclick="setCategory('전체')">전체 상품</a><a href="#products" onclick="setCategory('AirPods')">AirPods</a><a href="#products" onclick="setCategory('iPhone')">iPhone</a><a href="#products" onclick="setCategory('iPad')">iPad</a><a href="#products" onclick="setCategory('MacBook')">MacBook</a></nav><div class="search search-box">
+  ⌕
+  <input
+    id="searchInput"
+    placeholder="상품 검색"
+    aria-label="상품 검색"
+    autocomplete="off"
+  >
+  <div id="searchSuggestions" class="search-suggestions"></div>
+</div><a class="iconbtn" href="mypage.html" aria-label="마이페이지">♙</a><button class="iconbtn" onclick="openCart()" aria-label="장바구니">🛒<span class="count" id="cartCount">0</span></button></div></header>
+<main class="wrap">
+<section class="hero" aria-label="메인 배너">
+ <div class="hero-slide active" style="background-image:linear-gradient(90deg,#f8e7e4e8,#f8e7e400),url('img/hero-apple.png')"><div class="hero-copy"><div class="eyebrow">APPLE MALL SPECIAL</div><h1>기술이 만드는<br>새로운 일상</h1><p>당신의 일상을 더 스마트하게 바꿔줄 Apple 제품을 만나보세요.</p><a class="pill" href="#products">상품 둘러보기</a></div></div>
+ <div class="hero-slide" style="background-image:linear-gradient(90deg,#f8e7e4ee,#f8e7e400),url('img/hero-pastel.png')"><div class="hero-copy"><div class="eyebrow">NEW ARRIVALS</div><h1>나에게 맞는<br>스마트 라이프</h1><p>필요한 제품을 한곳에서 편리하게 확인하세요.</p><a class="pill" href="#products">신상품 보기</a></div></div>
+ <div class="hero-slide" style="background:linear-gradient(110deg,#f5dedb,#f6eee9 60%,#e6f1df)"><div class="hero-copy"><div class="eyebrow">MEMBERSHIP BENEFIT</div><h1>구매할수록 커지는<br>회원 혜택</h1><p>회원 등급에 따라 최대 7% 포인트를 적립해 드립니다.</p><a class="pill" href="#membership">등급 혜택 보기</a></div></div>
+ <div class="hero-slide" style="background:linear-gradient(110deg,#e9f3e2,#f8f0ec 60%,#f3dedd)"><div class="hero-copy"><div class="eyebrow">DIGITAL SHOPPING</div><h1>간편한 주문과<br>구매 내역 관리</h1><p>로그인 후 주문 내역과 회원 포인트를 확인하세요.</p><a class="pill" href="#products">쇼핑 시작하기</a></div></div>
+ <button class="hero-arrow prev" onclick="moveSlide(-1)" aria-label="이전 배너">‹</button><button class="hero-arrow next" onclick="moveSlide(1)" aria-label="다음 배너">›</button><div class="slide-controls"><button class="dot active" onclick="goSlide(0)" aria-label="배너 1"></button><button class="dot" onclick="goSlide(1)" aria-label="배너 2"></button><button class="dot" onclick="goSlide(2)" aria-label="배너 3"></button><button class="dot" onclick="goSlide(3)" aria-label="배너 4"></button></div>
+</section>
+<div class="quick"><a href="#products" onclick="setCategory('AirPods')"><b>🎧</b>AirPods</a><a href="#products" onclick="setCategory('iPhone')"><b>📱</b>iPhone</a><a href="#products" onclick="setCategory('iPad')"><b>📲</b>iPad</a><a href="#products" onclick="setCategory('MacBook')"><b>💻</b>MacBook</a><a href="#membership"><b>♛</b>멤버십</a><a href="#footer"><b>ⓘ</b>고객센터</a></div>
+<section class="section" id="products"><div class="section-head"><div><h2>지금 주목할 상품</h2><p class="section-sub">Apple Mall에서 인기 상품을 만나보세요.</p></div><span class="more" id="productStatus">상품 불러오는 중</span></div><div class="products" id="productGrid"><div class="empty">상품 정보를 불러오는 중입니다.</div></div></section>
+<section class="section" id="membership"><div class="membership"><div class="membership-intro"><h2>Apple Mall 멤버십</h2><p>구매 금액에 따라 등급이 올라가고<br>더 많은 포인트를 적립할 수 있습니다.</p><button class="pill" onclick="showMembership()">등급 자세히 보기</button></div><div class="tier"><div class="medal">🌱</div><strong>WELCOME</strong><small>신규 회원</small><b>1% 적립</b></div><div class="tier"><div class="medal">🥈</div><strong>SILVER</strong><small>누적 30만원</small><b>3% 적립</b></div><div class="tier"><div class="medal">🥇</div><strong>GOLD</strong><small>누적 100만원</small><b>5% 적립</b></div><div class="tier"><div class="medal">💎</div><strong>VIP</strong><small>누적 300만원</small><b>7% 적립</b></div></div></section>
+<section class="section promos"><div class="promo"><div><span class="eyebrow">WELCOME BENEFIT</span><h3>첫 가입 혜택</h3><p>회원가입 즉시 3,000P 지급</p><a class="pill" href="signup.html">회원가입</a></div><div class="emoji">🎁</div></div><div class="promo green"><div><span class="eyebrow">MY PAGE</span><h3>나의 쇼핑 정보</h3><p>포인트와 주문 내역을 한눈에 확인</p><a class="pill" href="mypage.html">마이페이지</a></div><div class="emoji">📦</div></div></section>
+<section class="benefits"><div class="benefit"><b>✓ 안전한 주문</b><span>주문 정보 DB 저장</span></div><div class="benefit"><b>♧ 등급별 적립</b><span>최대 7% 포인트</span></div><div class="benefit"><b>⌂ 주문 내역</b><span>마이페이지에서 확인</span></div><div class="benefit"><b>☎ 고객센터</b><span>평일 09:00 ~ 18:00</span></div></section>
+</main><footer class="footer" id="footer"><div class="wrap"><div class="footer-inner"><div><strong>🍎 Apple Mall</strong><br><small>더 나은 일상을 만드는 기술, Apple Mall과 함께하세요.</small></div><div><b>고객센터</b><br><small>1588-0000<br>평일 09:00 ~ 18:00</small></div><div><b>이용 안내</b><br><small>이용약관　|　개인정보처리방침</small></div><div><b>관리자</b><br><small><a class="admin-link" href="admin.html">관리자 페이지</a></small></div></div><div class="copyright">© 2026 Apple Mall. All rights reserved. · 본 사이트는 쇼핑몰 기능 시연용 데모입니다. 실제 카드 결제는 지원하지 않습니다.</div></div></footer>
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Apple Mall</h2><button class="close" onclick="closeModal()">✕</button></div><div id="modalContent"></div></div></div><div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="db.js"></script><script src="script.js"></script></body></html>
